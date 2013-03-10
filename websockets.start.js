@@ -23,7 +23,7 @@ function SessionController (user,channel,socketid) {
 	//Below is how you SHOULD not store sessions,
 	//but for this demo, lets bang!
 
-	this.sub = zmq.socket('sub')//redis.createClient();
+	this.sub = zmq.socket('sub')
 	this.user = user;
 	this.channel = channel;
 	this.sub.identity = user+':'+channel+':'+socketid;
