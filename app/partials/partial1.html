@@ -1,0 +1,55 @@
+<div class="container" ng-controller="MyCtrl1">
+	<div class="row-fluid">
+		<div class="span4">
+			<h5>Enter some room id</h5>
+			<input class="medium" ng-model="roomId"/>
+			<h5>Enter some username id</h5>
+			<input class="medium" ng-model="userName"/>
+			
+		</div>
+		<div class="span8" style="border:none;height:200px;overflow:scroll;">
+			<h5>Live activity feeds here</h5>
+			<ul ng-repeat="feed in feeds">
+				<li>{{feed}}</li>
+			</ul>
+		</div>		
+	</div><hr>
+	
+	<div class="row-fluid">
+		<div class="span4">
+			<h5>Input Live URL</h5>
+			<input class="medium" id="current_url" ng-model="current_url"/>
+		</div>
+		<div class="span8" style="border:none;height:200px;overflow:scroll;">
+			<h5>Live comments</h5>
+			<ul ng-repeat="comment in comments">
+				<li>{{comment}}</li>
+			</ul>
+			<input ng-model="new_comment" placeholder="write comment and hit enter">
+			<br/>
+			
+		</div>
+	
+		
+			
+	</div>
+	
+	<div class="row-fluid">
+		<div class="span4">
+		Current url => {{current_url}}
+		</div>
+		<div class="span8">
+		<button class="btn btn-small" ng-click="add_comment()">Add comment</button>
+		</div>
+	</div>
+	<hr>
+	
+	<div class="row-fluid">
+		<div class="span12">
+			<h5>Real time live notes sharing here</h5>
+			<textarea id="live_notes" ng-model="live_notes" ></textarea>
+		</div>	
+	</div>
+	<h4>Please make sure ROOM ID is not empty, then press start</h4>
+	<button ng-click="start_live_share()" class="btn">Start live share</button>	
+</div>
