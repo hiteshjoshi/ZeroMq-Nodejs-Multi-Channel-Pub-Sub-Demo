@@ -1,4 +1,4 @@
-ZeroMq-Nodejs-Multi-Channel-Pub-Sub-Demo
+Nodejs ZeroMQ PUB/SUB demo
 ========================================
 
 Requirements : 
@@ -10,3 +10,6 @@ Requirements :
 3) redis //optional, if you want to store sessions on the go
 
 All set? Go ahead run, 'node server'
+
+
+To make it scalable, use PORT forwarding in ZeroMQ
