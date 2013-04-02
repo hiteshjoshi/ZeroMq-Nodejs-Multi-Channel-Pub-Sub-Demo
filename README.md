@@ -1,4 +1,4 @@
-Nodejs ZeroMQ PUB/SUB demo
+Nodejs ZeroMQ PUB/SUB Example
 ========================================
 
 Requirements : 
